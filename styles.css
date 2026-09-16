@@ -63,7 +63,7 @@
     margin-bottom: 22px;
   }
   h1 {
-    font-size: clamp(36px, 5.5vw, 54px);
+    font-size: clamp(32px, 5.5vw, 44px);
     line-height: 1.1;
     font-weight: 700;
     max-width: 14ch;
@@ -171,7 +171,6 @@
     border-top: 1px solid var(--line);
     align-items: baseline;
   }
-  .tier-row:last-child { border-bottom: 1px solid var(--line); }
   .tier-name {
     font-weight: 700;
     font-size: 19px;
@@ -203,14 +202,18 @@
   .tier-features li {
     font-size: 14px;
     color: var(--muted);
-    padding-left: 16px;
+    padding-left: 14px;
     position: relative;
   }
   .tier-features li::before {
-    content: "—";
+    content: "";
     position: absolute;
     left: 0;
-    color: var(--gold);
+    top: 8px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--gold);
   }
   .tier-row.featured .tier-name,
   .tier-row.featured .tier-price { color: var(--gold); }
