@@ -1,0 +1,265 @@
+:root {
+    --bg: #10131A;
+    --panel: #161A22;
+    --line: #262B34;
+    --text: #ECEAE4;
+    --muted: #8A9099;
+    --gold: #C8A700;
+    --gold-dim: rgba(200,167,0,0.12);
+    --mono: 'IBM Plex Mono', monospace;
+    --sans: 'Inter', sans-serif;
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--sans);
+    margin: 0;
+    line-height: 1.55;
+  }
+  a { color: inherit; }
+  .wrap {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 0 28px;
+  }
+
+  /* NAV */
+  nav.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 26px 28px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .logo {
+    font-family: var(--mono);
+    font-weight: 500;
+    font-size: 15px;
+    letter-spacing: 0.02em;
+  }
+  .logo span { color: var(--gold); }
+  nav.top a.cta {
+    font-family: var(--mono);
+    font-size: 13px;
+    border: 1px solid var(--line);
+    padding: 8px 14px;
+    border-radius: 3px;
+    text-decoration: none;
+  }
+  nav.top a.cta:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* HERO */
+  header.hero {
+    padding: 70px 0 90px;
+    border-bottom: 1px solid var(--line);
+  }
+  .tag {
+    font-family: var(--mono);
+    color: var(--gold);
+    font-size: 14px;
+    margin-bottom: 22px;
+  }
+  h1 {
+    font-size: clamp(36px, 5.5vw, 54px);
+    line-height: 1.1;
+    font-weight: 700;
+    max-width: 14ch;
+    margin: 0 0 26px;
+  }
+  .hero p.lead {
+    font-size: 18px;
+    color: var(--muted);
+    max-width: 56ch;
+    margin: 0 0 34px;
+  }
+  .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
+  .btn-primary {
+    background: var(--gold);
+    color: #10131A;
+    font-weight: 600;
+    padding: 13px 22px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 15px;
+  }
+  .btn-ghost {
+    border: 1px solid var(--line);
+    padding: 13px 22px;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 15px;
+    color: var(--text);
+  }
+  .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+  /* SECTION LABEL */
+  .label {
+    font-family: var(--mono);
+    color: var(--muted);
+    font-size: 13px;
+    margin-bottom: 8px;
+  }
+  section { padding: 64px 0; border-bottom: 1px solid var(--line); }
+  section h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0 0 36px;
+    max-width: 30ch;
+  }
+
+  /* WORK */
+  .work-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+  }
+  @media (max-width: 700px) { .work-grid { grid-template-columns: 1fr; } }
+  .work-card {
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 6px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    transition: border-color 0.15s ease;
+  }
+  .work-card:hover { border-color: var(--gold); }
+  .work-domain {
+    font-family: var(--mono);
+    font-size: 20px;
+    color: var(--gold);
+    margin-bottom: 10px;
+    word-break: break-word;
+  }
+  .work-kind {
+    font-family: var(--mono);
+    font-size: 12px;
+    color: var(--muted);
+    margin-bottom: 16px;
+  }
+  .work-desc { color: var(--text); font-size: 15px; margin: 0; }
+
+  /* PROCESS */
+  .steps { display: flex; flex-direction: column; gap: 0; }
+  .step {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    gap: 18px;
+    padding: 22px 0;
+    border-top: 1px solid var(--line);
+  }
+  .step:last-child { border-bottom: none; }
+  .step-num {
+    font-family: var(--mono);
+    color: var(--gold);
+    font-size: 15px;
+  }
+  .step h3 { margin: 0 0 6px; font-size: 17px; }
+  .step p { margin: 0; color: var(--muted); font-size: 15px; }
+
+  /* PRICING */
+  .tier-list { display: flex; flex-direction: column; }
+  .tier-row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 8px 20px;
+    padding: 26px 0;
+    border-top: 1px solid var(--line);
+    align-items: baseline;
+  }
+  .tier-row:last-child { border-bottom: 1px solid var(--line); }
+  .tier-name {
+    font-weight: 700;
+    font-size: 19px;
+  }
+  .tier-name .for {
+    font-weight: 400;
+    color: var(--muted);
+    font-size: 14px;
+    display: block;
+    margin-top: 4px;
+  }
+  .tier-price {
+    font-family: var(--mono);
+    color: var(--gold);
+    font-size: 18px;
+    white-space: nowrap;
+  }
+  .tier-price .unit { color: var(--muted); font-size: 12px; display: block; text-align: right; }
+  .tier-features {
+    grid-column: 1 / -1;
+    list-style: none;
+    padding: 0;
+    margin: 14px 0 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4px 24px;
+  }
+  @media (max-width: 600px) { .tier-features { grid-template-columns: 1fr; } }
+  .tier-features li {
+    font-size: 14px;
+    color: var(--muted);
+    padding-left: 16px;
+    position: relative;
+  }
+  .tier-features li::before {
+    content: "—";
+    position: absolute;
+    left: 0;
+    color: var(--gold);
+  }
+  .tier-row.featured .tier-name,
+  .tier-row.featured .tier-price { color: var(--gold); }
+
+  /* ADD-ONS */
+  .addons { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  @media (max-width: 700px) { .addons { grid-template-columns: 1fr; } }
+  .addon {
+    background: var(--panel);
+    border: 1px dashed var(--gold);
+    border-radius: 6px;
+    padding: 24px;
+  }
+  .addon-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  .addon-head h3 { margin: 0; font-size: 16px; }
+  .addon-price {
+    font-family: var(--mono);
+    color: var(--gold);
+    font-size: 14px;
+    white-space: nowrap;
+  }
+  .addon p { color: var(--muted); font-size: 14px; margin: 0; }
+
+  /* NOTES */
+  .notes { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+  @media (max-width: 700px) { .notes { grid-template-columns: 1fr; } }
+  .notes h4 {
+    font-family: var(--mono);
+    color: var(--gold);
+    font-size: 12.5px;
+    margin: 0 0 10px;
+  }
+  .notes ul { margin: 0; padding-left: 16px; color: var(--muted); font-size: 14px; }
+  .notes li { margin-bottom: 6px; }
+
+  /* CONTACT */
+  section.contact { border-bottom: none; text-align: center; padding: 80px 0 60px; }
+  section.contact h2 { margin: 0 auto 16px; }
+  section.contact p { color: var(--muted); max-width: 46ch; margin: 0 auto 30px; }
+
+  footer {
+    padding: 30px 0 50px;
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+  }
