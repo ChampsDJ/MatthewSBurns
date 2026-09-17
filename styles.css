@@ -52,6 +52,15 @@
   nav.top a.cta:hover { border-color: var(--gold); color: var(--gold); }
 
   /* HERO */
+  .notfound-wrap {
+    min-height: calc(100vh - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-bottom: 100px;
+  }
+
   header.hero {
     padding: 70px 0 90px;
     border-bottom: 1px solid var(--line);
